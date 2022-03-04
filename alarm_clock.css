@@ -1,0 +1,606 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: flex;
+  height: auto;
+  justify-content: center;
+  background: radial-gradient(#f588d8, #c0a3e5);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  
+  background: rgb(27, 27, 27);
+  /* padding: 20px; */
+  /* height: auto; */
+}
+
+
+/* header Style Start */
+h1 {
+  display: inline-block;
+  color: white;
+  font-family: 'Righteous', serif;
+  font-size: 7em; 
+  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+  }
+  /* header Style End */
+
+  .outer-box {
+    height: auto;
+    width: auto;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+
+    padding: 10px 20px;
+  }
+
+  .current-time {
+    padding: 15px 30px;
+  background: #000;
+  /* font-size: 30px; */
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Righteous', serif;
+  font-size: 20px;
+  letter-spacing: 10px;
+  font-weight: bold;
+  color: #F7CE68;
+  box-shadow: 2px 2px #f55e07;
+  margin: 10px auto;
+  }
+  /* Digital Clock Style Start */
+.wrapper{
+  height: 105px;
+  width: 620px;
+  position: relative;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 10px;
+  cursor: default;
+  animation: animate 1.5s linear infinite;
+}
+.wrapper .display,
+.wrapper span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .display{
+  z-index: 999;
+  height: 90px;
+  width: 600px;
+  background: #1b1b1b;
+  border-radius: 6px;
+  text-align: center;
+}
+.display #time{
+  line-height: 95px;
+  color: #fff;
+  font-size: 80px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 1.5s linear infinite;
+}
+@keyframes animate {
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+.wrapper span{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: inherit;
+}
+.wrapper span:first-child{
+  filter: blur(7px);
+}
+.wrapper span:last-child{
+  filter: blur(20px);
+}
+
+/* Digital Clock Style End */
+
+
+
+/* Weekdays Style start */
+#current-day {
+  padding: 15px 30px;
+  background: #000;
+  /* font-size: 30px; */
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Righteous', serif;
+  font-size: 20px;
+  letter-spacing: 10px;
+  font-weight: bold;
+  color: rgb(140, 130, 252);
+  box-shadow: 2px 4px #51465f;
+  margin: 20px auto;
+}
+/* Weekdays Style End */
+
+.set-alarm {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Set Alarm Style Start */
+:root {
+  --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
+  --gray: #34495e;
+  --darkgray: #2c3e50;
+}
+
+.flex {
+  display: flex;
+  background: radial-gradient(#76b2fe, #b69efe);
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 20px;
+  box-shadow: 0px 6px 10px rgba(144, 173, 187, 0.952);
+}
+
+
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #f39c12;
+  font-size: 15px;
+  font-family: 'Righteous', serif;
+  font-weight: bolder;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 8em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+  margin: auto 25px;
+  font-size: 15px;
+  font-family: 'Righteous', serif;
+  font-weight: bolder;
+  /* text-align: center; */
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.9em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+  
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+/* Set Alarm Style End */
+
+
+/* Set alarm button style start */
+.flex-1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.button{
+  position:relative;
+  display:inline-block;
+  margin:20px 100px;
+}
+
+.button a{
+  color:white;
+  font-family: 'Righteous', serif;
+  font-weight:bold;
+  font-size:36px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration:none;
+  background-color:#FFA12B;
+  display:block;
+  position:relative;
+  padding:15px 30px;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.button a:active{
+  top:10px;
+  background-color:#F78900;
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+.button:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* Set alarm button style end */
+
+
+
+/* Stop Alarm button style Start */
+.button-1{
+  position:relative;
+  display:inline-block;
+  margin:20px;
+}
+
+.button-1 a{
+  color:white;
+  font-family: 'Righteous', serif;
+  font-weight:bold;
+  font-size:35px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration:none;
+  background-color: coral;
+  display:block;
+  position:relative;
+  padding:15px 30px;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 rgb(152, 48, 10);
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 rgb(152, 48, 10);
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 rgb(152, 48, 10);
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.button-1 a:active{
+  top:10px;
+  background-color: rgb(253, 75, 10);
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 rgb(152, 48, 10);
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 rgb(152, 48, 10);
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 rgb(152, 48, 10);
+}
+
+.button-1:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* Stop Alarm Button Style End */
+
+
+/* Style For Horizontal Line Start */
+.vertical-lines {
+  height: 10px;
+  color: darkorange;
+  background-image: linear-gradient(
+    90deg,
+    currentColor,
+    currentColor 33.33%,
+    transparent 33.33%,
+    transparent 100%);
+  background-size: 3px 100%;
+  width: 100%;
+  margin: 10px auto;
+}
+/* Style For Horizontal Line End */
+
+
+.upcoming-alarm {
+  display: flex;
+  color: white;
+  font-family: 'Righteous', serif;
+  font-size: 2em; 
+  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+  justify-content: center;
+  margin-bottom: 20px;
+  /* align-items: center; */
+}
+
+
+.alarm-list {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background: radial-gradient(#F78900, #FFA12B); */
+  padding: 10px 10px;
+  /* border-radius: 5px; */
+  height: auto;
+  /* width: 500px; */
+  background: #000;
+  color: rgb(140, 130, 252);
+  box-shadow: 2px 4px #51465f;
+}
+
+.alarm-list ul {
+  list-style: none;
+  /* width: 50%; */
+  /* border: 1px solid blue; */
+}
+.time-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 10px; */
+}
+
+.time {
+  background: radial-gradient(#F78900, #FFA12B);
+  color: white;
+  text-align: center;
+  border: none;
+  /* height: 50px; */
+  width: 150px;
+  padding: 15px 25px;
+  margin-right: 30px;
+  border-radius: 5px;
+  font-family: 'Righteous', serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px #eee;
+}
+
+
+.delete{
+  position:relative;
+  display:inline-block;
+  margin-left:30px;
+  
+}
+
+.delete a{
+  color:white;
+  font-family: 'Righteous', serif;
+  font-weight:bold;
+  font-size:20px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration:none;
+  background-color: coral;
+  display:block;
+  position:relative;
+  padding:10px 20px;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 rgb(152, 48, 10);
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 rgb(152, 48, 10);
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 rgb(152, 48, 10);
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.delete a:active{
+  top:10px;
+  background-color: rgb(250, 37, 37);
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 rgb(152, 48, 10);
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 rgb(152, 48, 10);
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 rgb(152, 48, 10);
+}
+
+.delete:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.set-alarm-container {
+  width: 100%;
+  
+}
+
+.alarms-container {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+  background-color: rgb(27, 27, 27);
+  /* width: 600px; */
+  height: auto;
+}
+.alarm {
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  /* background-color: #14ffe9; */
+}
+
+/* .btn {
+  outline: none;
+  border: none;
+  background-color: wheat;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 1px;
+  transition: all 0.3s ease-in-out;
+} */
+
+/* .alarm .delete-alarm {
+  border-radius: 2rem;
+  background-color: rgba(230, 13, 13, 0.918);
+  font-weight: bold;
+  color: wheat;
+  font-size: 20px;
+  padding: 10px;
+} */
+
+
+.alarm .delete-alarm {background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%)}
+.alarm .delete-alarm {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: all 0.5s ease-in-out;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 10px #eee;
+   border-radius: 10px;
+   display: block;
+   font-family: 'Righteous', serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+ }
+
+ /*
+ .alarm .delete-alarm::after {
+  content: "\f056";
+  font-family: 'Font Awesome Kit';
+  font-size: 20px;
+  
+  z-index: 10000;
+  color: #b69efe;
+  border: none;
+ }
+*/
+ .alarm .delete-alarm:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #FFA12B;
+   text-decoration: underline;
+ }
+
+ 
+/* Media Queries For  */
+@media screen and (max-width: 600px) and (min-width: 480px) {
+  h1 {
+    font-size: 5em;
+  }
+
+  .current-time {
+    padding: 10px 15px;
+  }
+
+  #current-day {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+
+  .select {
+    width: 6em;
+    font-size: 12px;
+    margin: auto 10px;
+  }
+  .select::after {
+    padding: 0.9em 0.3em;
+  }
+
+  .button a {
+    font-size: 25px;
+    padding: 10px 30px;
+  }
+
+  .upcoming-alarm {
+    font-size: 1.5em;
+  }
+
+  .time {
+    width: 100px;
+    font-size: 16px;
+  }
+
+  .alarm .delete-alarm {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .select {
+    width: 8em;
+    font-size: 12px;
+    margin: auto 10px;
+  }
+  .select::after {
+    padding: 0.9em 0.3em;
+  }
+}
+
